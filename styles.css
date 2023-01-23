@@ -37,7 +37,7 @@ body {
   border-radius: 10px;
 }
 
-.gallery::after {           /*小技巧：创建一个空白flex item，因为最后一行只有一张照片，会居中。为了使它居左，可以这么做*/
+.gallery::after {           /*小技巧：创建一个空白flex item，当布局为两列时，最后一行只有一张照片，这么做可以使它居左而不是居中。当布局为三列或一列时，不会影响原页面。*/
   content: "";
   width: 350px;
 }
