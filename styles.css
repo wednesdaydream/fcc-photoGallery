@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;       /*统一盒模型*/
 }
 
 body {
@@ -18,13 +18,13 @@ body {
 }
 
 .gallery {
-  display: flex;
+  display: flex;                /*FlexBox布局*/
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  max-width: 1400px;
+  gap: 16px;                    /*设置元素间距*/
+  max-width: 1400px;            /*设置最大宽度*/
   margin: 0 auto;
   padding: 20px 10px;
 }
@@ -33,11 +33,11 @@ body {
   width: 100%;
   max-width: 350px;
   height: 300px;
-  object-fit: cover;
+  object-fit: cover;         /*调整图片大小*/
   border-radius: 10px;
 }
 
-.gallery::after {
+.gallery::after {           /*小技巧：创建一个空白flex item，因为最后一行只有一张照片，会居中。为了使它居左，可以这么做*/
   content: "";
   width: 350px;
 }
